@@ -69,3 +69,33 @@ Enter a country name (or type 'global' for worldwide data): Indonesia
   - Active Cases: 400,000
   - Active Cases (In Words): Four Hundred Thousand
 
+## Dependencies
+
+- **`requests`:**
+  - Used for making HTTP requests to fetch COVID-19 data.
+
+## COVID-19 Data Retrieval
+
+### Functions
+
+#### `get_country_data(country)`
+
+- Retrieves and displays COVID-19 data for a specific country.
+- Uses the Disease.sh API for data retrieval.
+
+#### `get_global_data()`
+
+- Retrieves and displays global COVID-19 data.
+- Uses the Disease.sh API for data retrieval.
+
+### Usage
+
+- Call these functions based on user input to fetch and present COVID-19 data.
+
+## Notes
+
+- This script uses the Disease.sh API to fetch real-time COVID-19 data.
+
+## Contribute
+
+- Feel free to contribute by opening issues or submitting pull requests. Your contributions are highly appreciated!
