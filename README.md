@@ -1,6 +1,6 @@
-# COVID-19 Data and Number-to-Words Converter
+# COVID-19 Data Retrieval
 
-This Python script serves a dual purpose: fetching COVID-19 data globally or for a specific country and presenting numeric figures in words for improved readability.
+This Python script is designed to facilitate the retrieval of COVID-19 data globally or for a specific country, with an additional feature to present numeric figures in words for enhanced readability.
 
 ## Usage
 
@@ -28,18 +28,19 @@ This Python script serves a dual purpose: fetching COVID-19 data globally or for
 
 ## Code Structure
 
-### Data Retrieval Functions
+### COVID-19 Data Retrieval Functions
 
 - **`get_country_data` and `get_global_data` Functions:**
-   - Utilize the `requests` library to fetch COVID-19 data from Disease.sh API.
-   - Handle country-specific or global data retrieval.
-   - Check for invalid country names or data unavailability.
+   - Utilize the `requests` library to fetch real-time COVID-19 data from the Disease.sh API.
+   - `get_country_data`: Retrieve country-specific COVID-19 data.
+   - `get_global_data`: Fetch global COVID-19 data.
+   - Handle invalid country names or data unavailability gracefully.
 
 ### Formatting and Printing Functions
 
 - **`format_number` and `convert_and_print` Functions:**
-   - `format_number`: Add commas for better readability.
-   - `convert_and_print`: Print numeric value and its word representation.
+   - `format_number`: Add commas for better readability to numeric values.
+   - `convert_and_print`: Display both the numeric value and its word representation.
 
 ### Number-to-Words Conversion Functions
 
@@ -55,6 +56,5 @@ This Python script serves a dual purpose: fetching COVID-19 data globally or for
 
 ## Example Output
 
-- **User Input:**
-  ```bash
-  Enter a country name (or type 'global' for worldwide data): Indonesia
+```markdown
+Enter a country name (or type 'global' for worldwide data): Indonesia
