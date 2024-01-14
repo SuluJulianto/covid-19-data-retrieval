@@ -1,43 +1,60 @@
-# COVID-19 Data Retrieval
+# COVID-19 Data and Number-to-Words Converter
 
-This Python script retrieves the latest COVID-19 data globally or for a specific country using the `disease.sh` API.
+This Python script serves a dual purpose: fetching COVID-19 data globally or for a specific country and presenting numeric figures in words for improved readability.
 
-## Prerequisites
+## Usage
 
-- Python 3.x
-- Requests library (`pip install requests`)
+1. **Clone the Repository:**
+   - Clone the repository locally:
+     ```bash
+     git clone https://github.com/sulujulianto/covid19-data-retrieval.git
+     cd covid19-data-retrieval
+     ```
 
-## How to Use
+2. **Install Dependencies:**
+   - Install the required packages:
+     ```bash
+     pip install requests
+     ```
 
-1. Clone or download the repository to your local machine.
-2. Install the requests library if you haven't already: `pip install requests`
-3. Run the script: `python covid_data.py`
-4. Input the country name when prompted. If you want global data, input 'global'.
+3. **Run the Script:**
+   - Execute the script:
+     ```bash
+     python covid19_data.py
+     ```
 
-## Output
+4. **Follow Prompts:**
+   - Enter a country name or 'global' for worldwide data.
 
-- For a specific country:
-  - Confirmed cases
-  - Deaths
-  - Recovered cases
-  - Active cases
+## Code Structure
 
-- For global data:
-  - Total confirmed cases worldwide
-  - Total deaths worldwide
-  - Total recovered cases worldwide
-  - Active cases worldwide
+### Data Retrieval Functions
 
-## Example Usage
+- **`get_country_data` and `get_global_data` Functions:**
+   - Utilize the `requests` library to fetch COVID-19 data from Disease.sh API.
+   - Handle country-specific or global data retrieval.
+   - Check for invalid country names or data unavailability.
 
-- To get data for a specific country: Enter a country name: Indonesia
-- To get global data: Enter a country name (or type 'global' for worldwide data): global
+### Formatting and Printing Functions
 
-## Notes
+- **`format_number` and `convert_and_print` Functions:**
+   - `format_number`: Add commas for better readability.
+   - `convert_and_print`: Print numeric value and its word representation.
 
-- The data is sourced from `disease.sh` API and is updated regularly.
-- The API might have slight delays in data updates.
+### Number-to-Words Conversion Functions
 
-## Contributions
+- **`convert_below_thousand` and `num_to_words` Functions:**
+   - `convert_below_thousand`: Convert a number less than 1000 into words.
+   - `num_to_words`: Convert numeric data into words, handling different magnitudes.
 
-Feel free to contribute by enhancing the functionality or adding new features. Create a pull request to suggest improvements.
+### Main Execution Function
+
+- **`main` Function:**
+   - Take user input for a country name or 'global'.
+   - Call functions to retrieve and display COVID-19 data.
+
+## Example Output
+
+- **User Input:**
+  ```bash
+  Enter a country name (or type 'global' for worldwide data): Indonesia
