@@ -56,7 +56,10 @@ This Python script is designed to facilitate the retrieval of COVID-19 data glob
 
 ## Example Output
 
+'''markdown
 Enter a country name (or type 'global' for worldwide data): Indonesia
+
+### Script Output:
 Country: Indonesia
 Confirmed Cases: 5,000,000
 Confirmed Cases (In Words): Five Million
