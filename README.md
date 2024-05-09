@@ -45,11 +45,6 @@ Enter a country name (or type 'global' for worldwide data): Indonesia
   - Active Cases: 400,000
   - Active Cases (In Words): Four Hundred Thousand
 
-## Dependencies
-
-- **`requests`:**
-  - Used for making HTTP requests to fetch COVID-19 data.
-
 ## COVID-19 Data Retrieval
 
 ### Functions
